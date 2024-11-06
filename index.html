@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sounds for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5D8EnVrTbcEFeTPWhLVFf02fMgB3acP0RU7F5jw7EU45D5P9xPPlSt8QsmvUo4Cb" crossorigin="anonymous">
+    <link rel="icon" href="images/icon.jpeg" type="image/png">
+</head>
+<body>
+<header class="p-3" style="background-color: #cb8bcf;">
+    <div class="container d-flex align-items-center justify-content-between">
+        <!-- Search Form -->
+        <form onsubmit="searchAnimal(); return false;" class="d-flex me-auto" role="search">
+            <input type="search" id="searchInput" class="form-control" placeholder="Try 'owl', 'lion'" aria-label="Search">
+        </form>
+
+        <!-- Home Icon with custom right margin -->
+        <a href="" class="text-white text-decoration-none" style="margin-left: 1020px;"> <!-- Adjust margin-left value as needed -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"/>
+                <path fill-rule="evenodd" d="M12 3v10h-1V3z"/>
+                <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"/>
+                <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </a>
+    </div>
+</header>
+
+    
+    <h1>Meet Our Animal Friends!</h1>
+    <div class="container">
+        
+        <div class="animal-card" data-animal="dog">
+            <img src="images/dog.jpg" alt="Dog">
+            <div class="animal-info">
+                <p>Dog</p>
+                <button class="play-pause-btn" onclick="togglePlay('dog')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+
+        <div class="animal-card" data-animal="cat">
+            <img src="images/cat.jpeg" alt="Cat">
+            <div class="animal-info">
+                <p>Cat</p>
+                <button class="play-pause-btn" onclick="togglePlay('cat')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+
+        <div class="animal-card" data-animal="bird">
+            <img src="images/bird.jpeg" alt="Bird">
+            <div class="animal-info">
+                <p>Bird</p>
+                <button class="play-pause-btn" onclick="togglePlay('bird')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="cow">
+            <img src="images/cow.jpg" alt="Cow">
+            <div class="animal-info">
+                <p>Cow</p>
+                <button class="play-pause-btn" onclick="togglePlay('cow')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+
+        <div class="animal-card" data-animal="lion">
+            <img src="images/lion.jpeg" alt="Lion">
+            <div class="animal-info">
+                <p>Lion</p>
+                <button class="play-pause-btn" onclick="togglePlay('lion')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="elephant">
+            <img src="images/elephant.jpg" alt="Elephant">
+            <div class="animal-info">
+                <p>Elephant</p>
+                <button class="play-pause-btn" onclick="togglePlay('elephant')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="sheep">
+            <img src="images/sheep.jpeg" alt="Sheep">
+            <div class="animal-info">
+                <p>Sheep</p>
+                <button class="play-pause-btn" onclick="togglePlay('sheep')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="horse">
+            <img src="images/horse.jpg" alt="Horse">
+            <div class="animal-info">
+                <p>Horse</p>
+                <button class="play-pause-btn" onclick="togglePlay('horse')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="frog">
+            <img src="images/frog.jpg" alt="Frog">
+            <div class="animal-info">
+                <p>Frog</p>
+                <button class="play-pause-btn" onclick="togglePlay('frog')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+
+        <div class="animal-card" data-animal="duck">
+            <img src="images/duck.jpg" alt="Duck">
+            <div class="animal-info">
+                <p>Duck</p>
+                <button class="play-pause-btn" onclick="togglePlay('duck')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="owl">
+            <img src="images/owl.jpg" alt="Owl">
+            <div class="animal-info">
+                <p>Owl</p>
+                <button class="play-pause-btn" onclick="togglePlay('owl')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+        <div class="animal-card" data-animal="monkey">
+            <img src="images/monkey.jpg" alt="Monkey">
+            <div class="animal-info">
+                <p>Monkey</p>
+                <button class="play-pause-btn" onclick="togglePlay('monkey')">Play</button>
+                <input type="range" class="volume-slider" style="display: none;" min="0" max="100" value="100">
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

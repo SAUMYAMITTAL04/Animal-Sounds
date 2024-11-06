@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(135deg, #7bd3ea, #a1eebd, #f6f7c4, #f6d6d6);
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Smooth gradient transition effect */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #66bfbf; /* Header color */
+    margin-top: 20px;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.animal-card {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #eaf6f6; /* Default background color */
+    position: relative; /* Required for absolute positioning of button */
+    overflow: hidden; /* Ensures button doesn't exceed the card */
+    transition: transform 0.2s, background-color 0.2s;
+    height: 300px; /* Fixed height for cards */
+    border: 5px solid black;
+}
+
+/* Hover color */
+.animal-card:hover {
+    background-color: #3c07c1; /* Dark blue color on hover */
+}
+
+/* Play/pause button styling */
+.play-pause-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f76b8a; /* Button color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2; /* Ensure the button appears above the slider */
+    border: 2px solid black;
+}
+
+.play-pause-btn:hover {
+    background-color: #fc5c7d; /* Darker shade on hover */
+}
+
+/* Volume slider styling */
+.volume-slider {
+    width: 80%; /* Set the width of the slider */
+    margin: 10px auto; /* Center the slider with margin */
+    display: block; /* Ensure it is displayed */
+}
+
+/* Glowing effect */
+.animal-card.active {
+    box-shadow: 0 0 15px 5px gold; /* Golden glow when playing */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Highlight color for search */
+.animal-card.highlight {
+    background-color: rgba(245, 136, 200, 0.5); /* Light pink background */
+    position: relative;
+}
+
+/* Ensure the glow and highlights function correctly */
+.animal-info {
+    margin-top: 20px; /* Spacing between the button and the animal name */
+    text-align: center;
+    color: #f76b8a; /* Text color */
+    font-weight: bold;
+    position: relative;
+}
+
+.animal-info p {
+    margin: 10px 0 0; /* Extra spacing for the animal name */
+    
+}
+
+/* Image styling */
+.animal-card img {
+    width: 100%; /* Responsive image */
+    height: 75%; /* Adjust height to maintain aspect ratio */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border-radius: 10px;
+    
+    
+}
+
+.animal-info button.play-pause-btn {
+    margin-top: 100px; /* Adjust the value as needed for spacing */
+    margin-top: 8px;
+}
+
+/* Header background color */
+header {
+    background-color: #007bff; /* Header color */
+}
+
+/* Adjust search bar appearance */
+header .form-control {
+    background-color: #fbf8f9;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 200px;
+    color: #000000;
+}
+
+header .form-control::placeholder {
+    color: #555;
+}
+
+/* Icon styling */
+header a img {
+    vertical-align: middle;
+}
+
+/* Adjust the play button position slightly above the name */
+.play-pause-btn {
+    position: absolute;
+    bottom: 60px; /* Adjust this value if needed for spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
